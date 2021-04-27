@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# TODO:
+# + read config from .buildpack_virtualenvs
+#   + 
+
+echo "BUILD_DIR: $1"
+ls $1
+echo "---"
+
+echo "CACHE_DIR: $2"
+ls $2
+echo "---"
+
+echo "ENV_DIR: $1"
+ls $3
+echo "---"
+
+echo "CURRENT DIRECTORY: $(pwd)"
+ls
+echo "---"
+
+# $1/.buildpack_virtualenvs
+python bin/install_virtualenvs.py

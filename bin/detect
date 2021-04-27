@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f $1/.buildpack_virtualenvs ]; then
+    echo "heroku-buildpack-multi-virtualenv"
+    exit 0
+else
+    # exit 1
+    exit 0
+fi
